@@ -56,6 +56,10 @@ f:SetScript("OnEvent", function(self, event, arg1, ...)
             PlayerSpellsFrame:SetScript("OnDragStart", function(self) self:StartMoving() end);
 
         end)
+        EventRegistry:RegisterCallback("PlayerSpellsFrame.TalentTab.Show", function()
+            PlayerSpellsFrame:SetScale(KludgeDB.Scale)
+        end)
+
     end
 end)
 
